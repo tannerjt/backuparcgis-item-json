@@ -126,7 +126,7 @@ class BackupArcGISItem {
     const tmpHash = await this.writeTmpFile(tmpPath, JSON.stringify(combined))
 
     const pathExists = await fsPromises.exists(`${this.workingDir}/archive/${this.itemId}`)
-    const outFileName = `${this.workingDir}/archive/${this.itemId}/${Date.now()}.zip`
+    const outFileName = `${this.workingDir}/archive/${this.itemId}/${Date.now()}.json`
   
     if (pathExists) {
       // path already exists, check file sizes
